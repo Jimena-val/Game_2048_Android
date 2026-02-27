@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.moviles.lisas.ListView
 import com.example.moviles.ui.theme.MovilesTheme
 
 class MainActivity : ComponentActivity() {
@@ -24,7 +25,7 @@ class MainActivity : ComponentActivity() {
                         //name = "Android",
                         //modifier = Modifier.padding(innerPadding)
                     //)
-                    MyTextView()
+                    ListView() //lo ponemos para poder correrlo en el emulador
                 }
             }
         }

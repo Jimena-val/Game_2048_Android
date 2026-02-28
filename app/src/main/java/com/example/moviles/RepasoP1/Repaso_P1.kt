@@ -2,16 +2,10 @@ package com.example.moviles.RepasoP1
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
@@ -34,27 +28,24 @@ import com.example.moviles.R
 @Composable
 @Preview(showBackground = true)
 fun ecommerce() {
-    var busqueda by remember {mutableStateOf("")}
-    var producto by remember {mutableStateOf("")}
 
     Column(modifier= Modifier.fillMaxSize().background(Color.White)) {
         TextField(
             value= "",
-            onValueChange = {busqueda = it},
+            onValueChange = { },
             placeholder = { Text(text = "Color de las zapatillas...") },
             modifier = Modifier.padding(50.dp)
         )
         Spacer(modifier= Modifier.padding(5.dp))
         Text(
             text= "Zapatillas Deportivas",
-            fontSize = 40.sp,
+            fontSize = 35.sp,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.SemiBold
         )
         Column {
-            Box {
-                producto
-            }
+            TenisRosas()
+            TenisCafes()
         }
     }
 }
